@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>What to do when things go wrong &mdash; Jupyter Notebook 6.0.0.dev0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="Motivating Examples" href="examples/Notebook/Typesetting Equations.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jupyter Notebook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">The Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui_components.html">User interface components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Notebook/examples_index.html">Notebook Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What to do when things go wrong</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter-fails-to-start">Jupyter fails to start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter-doesn-t-load-or-doesn-t-work-in-the-browser">Jupyter doesn't load or doesn't work in the browser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter-can-t-start-a-kernel">Jupyter can't start a kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#asking-for-help">Asking for help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comms.html">Comms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="config_overview.html">Configuration Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Config file and command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="public_server.html">Running a notebook server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security in the Jupyter notebook server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html#security-in-notebook-documents">Security in notebook documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="frontend_config.html">Configuring the notebook frontend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Notebook/Distributing Jupyter Extensions as Python Packages.html">Distributing Jupyter Extensions as Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending/index.html">Extending the Notebook</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to the Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development_release.html">Making a Notebook release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development_faq.html">Developer FAQ</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/Notebook/nbpackage/mynotebook.html">My Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Notebook/nbpackage/nbs/other.html">Other notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jupyter Notebook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>What to do when things go wrong</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/troubleshooting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="what-to-do-when-things-go-wrong">
+<h1>What to do when things go wrong<a class="headerlink" href="#what-to-do-when-things-go-wrong" title="제목 주소">¶</a></h1>
+<p>First, have a look at the common problems listed below. If you can figure it out
+from these notes, it will be quicker than asking for help.</p>
+<p>Check that you have the latest version of any packages that look relevant.
+Unfortunately it's not always easy to figure out what packages are relevant,
+but if there was a bug that's already been fixed,
+it's easy to upgrade and get on with what you wanted to do.</p>
+<div class="section" id="jupyter-fails-to-start">
+<h2>Jupyter fails to start<a class="headerlink" href="#jupyter-fails-to-start" title="제목 주소">¶</a></h2>
+<ul class="simple">
+<li>Have you <a class="reference external" href="http://jupyter.org/install.html">installed it</a>? ;-)</li>
+<li>If you're using a menu shortcut or Anaconda launcher to start it, try
+opening a terminal or command prompt and running the command <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code>.</li>
+<li>If it can't find <code class="docutils literal notranslate"><span class="pre">jupyter</span></code>,
+you may need to configure your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable.
+If you don't know what that means, and don't want to find out,
+just (re)install Anaconda with the default settings,
+and it should set up PATH correctly.</li>
+<li>If Jupyter gives an error that it can't find <code class="docutils literal notranslate"><span class="pre">notebook</span></code>,
+check with pip or conda that the <code class="docutils literal notranslate"><span class="pre">notebook</span></code> package is installed.</li>
+<li>Try running <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> (with a hyphen). This should normally be the
+same as <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> (with a space), but if there's any difference,
+the version with the hyphen is the 'real' launcher, and the other one wraps
+that.</li>
+</ul>
+</div>
+<div class="section" id="jupyter-doesn-t-load-or-doesn-t-work-in-the-browser">
+<h2>Jupyter doesn't load or doesn't work in the browser<a class="headerlink" href="#jupyter-doesn-t-load-or-doesn-t-work-in-the-browser" title="제목 주소">¶</a></h2>
+<ul class="simple">
+<li>Try in another browser (e.g. if you normally use Firefox, try with Chrome).
+This helps pin down where the problem is.</li>
+<li>Try disabling any browser extensions and/or any Jupyter extensions you have
+installed.</li>
+<li>Some internet security software can interfere with Jupyter.
+If you have security software, try turning it off temporarily,
+and look in the settings for a more long-term solution.</li>
+<li>In the address bar, try changing between <code class="docutils literal notranslate"><span class="pre">localhost</span></code> and <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code>.
+They should be the same, but in some cases it makes a difference.</li>
+</ul>
+</div>
+<div class="section" id="jupyter-can-t-start-a-kernel">
+<h2>Jupyter can't start a kernel<a class="headerlink" href="#jupyter-can-t-start-a-kernel" title="제목 주소">¶</a></h2>
+<p>Files called <em>kernel specs</em> tell Jupyter how to start different kinds of kernel.
+To see where these are on your system, run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">kernelspec</span> <span class="pre">list</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter kernelspec list
+Available kernels:
+  python3      /home/takluyver/.local/lib/python3.6/site-packages/ipykernel/resources
+  bash         /home/takluyver/.local/share/jupyter/kernels/bash
+  ir           /home/takluyver/.local/share/jupyter/kernels/ir
+</pre></div>
+</div>
+<p>There's a special fallback for the Python kernel:
+if it doesn't find a real kernelspec, but it can import the <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code> package,
+it provides a kernel which will run in the same Python environment as the notebook server.
+A path ending in <code class="docutils literal notranslate"><span class="pre">ipykernel/resources</span></code>, like in the example above,
+is this default kernel.
+The default often does what you want,
+so if the <code class="docutils literal notranslate"><span class="pre">python3</span></code> kernelspec points somewhere else
+and you can't start a Python kernel,
+try deleting or renaming that kernelspec folder to expose the default.</p>
+<p>If your problem is with another kernel, not the Python one we maintain,
+you may need to look for support about that kernel.</p>
+</div>
+<div class="section" id="asking-for-help">
+<h2>Asking for help<a class="headerlink" href="#asking-for-help" title="제목 주소">¶</a></h2>
+<p>As with any problem, try searching to see if someone has already found an answer.
+If you can't find an existing answer, you can ask questions at:</p>
+<ul class="simple">
+<li>The <a class="reference external" href="https://stackoverflow.com/questions/tagged/jupyter-notebook">jupyter-notebook tag on Stackoverflow</a></li>
+<li>The <a class="reference external" href="https://github.com/jupyter/help">jupyter/help repository on Github</a></li>
+<li>Or in an issue on another repository, if it's clear which component is
+responsible.</li>
+</ul>
+<p>Don't forget to provide details. What error messages do you see?
+What platform are you on? How did you install Jupyter?
+What have you tried already?
+The <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">troubleshoot</span></code> command collects a lot of information
+about your installation, which can be useful.</p>
+<p>Remember that it's not anyone's job to help you.
+We want Jupyter to work for you,
+but we can't always help everyone individually.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="examples/Notebook/Typesetting Equations.html" class="btn btn-neutral" title="Motivating Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jupyter Team, https://jupyter.org.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.0.0.dev0',
+            LANGUAGE:'ko',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="None"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

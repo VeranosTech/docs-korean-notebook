@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Notebook Basics &mdash; Jupyter Notebook 6.0.0.dev0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="Running Code" href="Running Code.html" />
+    <link rel="prev" title="What is the Jupyter Notebook?" href="What is the Jupyter Notebook.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Jupyter Notebook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../notebook.html">The Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ui_components.html">User interface components</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="examples_index.html">Notebook Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="What is the Jupyter Notebook.html">What is the Jupyter Notebook?</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Notebook Basics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#The-Notebook-dashboard">The Notebook dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Overview-of-the-Notebook-UI">Overview of the Notebook UI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Modal-editor">Modal editor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Edit-mode">Edit mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Command-mode">Command mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Mouse-navigation">Mouse navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Keyboard-Navigation">Keyboard Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Running Code.html">Running Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Working With Markdown Cells.html">Markdown Cells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom Keyboard Shortcuts.html">Keyboard Shortcut Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom Keyboard Shortcuts.html#Keyboard-Shortcut-Customization-(Pre-Notebook-5.0)">Keyboard Shortcut Customization (Pre Notebook 5.0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="JavaScript Notebook Extensions.html">Embracing web standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Importing Notebooks.html">Importing Jupyter Notebooks as Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Connecting with the Qt Console.html">Connecting to an existing IPython kernel using the Qt Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Typesetting Equations.html">Motivating Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">What to do when things go wrong</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../comms.html">Comms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Configuration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../config_overview.html">Configuration Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../config.html">Config file and command line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../public_server.html">Running a notebook server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html">Security in the Jupyter notebook server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../security.html#security-in-notebook-documents">Security in notebook documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../frontend_config.html">Configuring the notebook frontend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Distributing Jupyter Extensions as Python Packages.html">Distributing Jupyter Extensions as Python Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extending/index.html">Extending the Notebook</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Contributor Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to the Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_release.html">Making a Notebook release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_faq.html">Developer FAQ</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nbpackage/mynotebook.html">My Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nbpackage/nbs/other.html">Other notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Jupyter Notebook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="examples_index.html">Notebook Examples</a> &raquo;</li>
+        
+      <li>Notebook Basics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/examples/Notebook/Notebook Basics.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Notebook-Basics">
+<h1>Notebook Basics<a class="headerlink" href="#Notebook-Basics" title="제목 주소">¶</a></h1>
+<div class="section" id="The-Notebook-dashboard">
+<h2>The Notebook dashboard<a class="headerlink" href="#The-Notebook-dashboard" title="제목 주소">¶</a></h2>
+<p>When you first start the notebook server, your browser will open to the notebook dashboard. The dashboard serves as a home page for the notebook. Its main purpose is to display the notebooks and files in the current directory. For example, here is a screenshot of the dashboard page for the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory in the Jupyter repository:</p>
+<p><img alt="Jupyter dashboard showing files tab" src="../../_images/dashboard_files_tab.png" /></p>
+<p>The top of the notebook list displays clickable breadcrumbs of the current directory. By clicking on these breadcrumbs or on sub-directories in the notebook list, you can navigate your file system.</p>
+<p>To create a new notebook, click on the “New” button at the top of the list and select a kernel from the dropdown (as seen below). Which kernels are listed depend on what’s installed on the server. Some of the kernels in the screenshot below may not exist as an option to you.</p>
+<p><img alt="Jupyter “New” menu" src="../../_images/dashboard_files_tab_new.png" /></p>
+<p>Notebooks and files can be uploaded to the current directory by dragging a notebook file onto the notebook list or by the “click here” text above the list.</p>
+<p>The notebook list shows green “Running” text and a green notebook icon next to running notebooks (as seen below). Notebooks remain running until you explicitly shut them down; closing the notebook’s page is not sufficient.</p>
+<p><img alt="Jupyter dashboard showing one notebook with a running kernel" src="../../_images/dashboard_files_tab_run.png" /></p>
+<p>To shutdown, delete, duplicate, or rename a notebook check the checkbox next to it and an array of controls will appear at the top of the notebook list (as seen below). You can also use the same operations on directories and files when applicable.</p>
+<p><img alt="Buttons: Duplicate, rename, shutdown, delete, new, refresh" src="../../_images/dashboard_files_tab_btns.png" /></p>
+<p>To see all of your running notebooks along with their directories, click on the “Running” tab:</p>
+<p><img alt="Jupyter dashboard running tab" src="../../_images/dashboard_running_tab.png" /></p>
+<p>This view provides a convenient way to track notebooks that you start as you navigate the file system in a long running notebook server.</p>
+</div>
+<div class="section" id="Overview-of-the-Notebook-UI">
+<h2>Overview of the Notebook UI<a class="headerlink" href="#Overview-of-the-Notebook-UI" title="제목 주소">¶</a></h2>
+<p>If you create a new notebook or open an existing one, you will be taken to the notebook user interface (UI). This UI allows you to run code and author notebook documents interactively. The notebook UI has the following main areas:</p>
+<ul class="simple">
+<li>Menu</li>
+<li>Toolbar</li>
+<li>Notebook area and cells</li>
+</ul>
+<p>The notebook has an interactive tour of these elements that can be started in the “Help:User Interface Tour” menu item.</p>
+</div>
+<div class="section" id="Modal-editor">
+<h2>Modal editor<a class="headerlink" href="#Modal-editor" title="제목 주소">¶</a></h2>
+<p>Starting with IPython 2.0, the Jupyter Notebook has a modal user interface. This means that the keyboard does different things depending on which mode the Notebook is in. There are two modes: edit mode and command mode.</p>
+<div class="section" id="Edit-mode">
+<h3>Edit mode<a class="headerlink" href="#Edit-mode" title="제목 주소">¶</a></h3>
+<p>Edit mode is indicated by a green cell border and a prompt showing in the editor area:</p>
+<p><img alt="Jupyter cell with green border" src="../../_images/edit_mode.png" /></p>
+<p>When a cell is in edit mode, you can type into the cell, like a normal text editor.</p>
+<div class="alert alert-success"><p>Enter edit mode by pressing <code class="docutils literal notranslate"><span class="pre">Enter</span></code> or using the mouse to click on a cell’s editor area.</p>
+</div></div>
+<div class="section" id="Command-mode">
+<h3>Command mode<a class="headerlink" href="#Command-mode" title="제목 주소">¶</a></h3>
+<p>Command mode is indicated by a grey cell border with a blue left margin:</p>
+<p><img alt="Jupyter cell with blue &amp; grey border" src="../../_images/command_mode.png" /></p>
+<p>When you are in command mode, you are able to edit the notebook as a whole, but not type into individual cells. Most importantly, in command mode, the keyboard is mapped to a set of shortcuts that let you perform notebook and cell actions efficiently. For example, if you are in command mode and you press <code class="docutils literal notranslate"><span class="pre">c</span></code>, you will copy the current cell - no modifier is needed.</p>
+<div class="alert alert-error"><p>Don’t try to type into a cell in command mode; unexpected things will happen!</p>
+</div><div class="alert alert-success"><p>Enter command mode by pressing <code class="docutils literal notranslate"><span class="pre">Esc</span></code> or using the mouse to click <em>outside</em> a cell’s editor area.</p>
+</div></div>
+</div>
+<div class="section" id="Mouse-navigation">
+<h2>Mouse navigation<a class="headerlink" href="#Mouse-navigation" title="제목 주소">¶</a></h2>
+<p>All navigation and actions in the Notebook are available using the mouse through the menubar and toolbar, which are both above the main Notebook area:</p>
+<p><img alt="Jupyter notebook menus and toolbar" src="../../_images/menubar_toolbar.png" /></p>
+<p>The first idea of mouse based navigation is that <strong>cells can be selected by clicking on them.</strong> The currently selected cell gets a grey or green border depending on whether the notebook is in edit or command mode. If you click inside a cell’s editor area, you will enter edit mode. If you click on the prompt or output area of a cell you will enter command mode.</p>
+<p>If you are running this notebook in a live session (not on <a class="reference external" href="http://nbviewer.jupyter.org">http://nbviewer.jupyter.org</a>) try selecting different cells and going between edit and command mode. Try typing into a cell.</p>
+<p>The second idea of mouse based navigation is that <strong>cell actions usually apply to the currently selected cell</strong>. Thus if you want to run the code in a cell, you would select it and click the button in the toolbar or the “Cell:Run” menu item. Similarly, to copy a cell you would select it and click the button in the toolbar or the “Edit:Copy” menu item. With this simple pattern, you should be able to do most everything you need with the mouse.</p>
+<p>Markdown cells have one other state that can be modified with the mouse. These cells can either be rendered or unrendered. When they are rendered, you will see a nice formatted representation of the cell’s contents. When they are unrendered, you will see the raw text source of the cell. To render the selected cell with the mouse, click the button in the toolbar or the “Cell:Run” menu item. To unrender the selected cell, double click on the cell.</p>
+</div>
+<div class="section" id="Keyboard-Navigation">
+<h2>Keyboard Navigation<a class="headerlink" href="#Keyboard-Navigation" title="제목 주소">¶</a></h2>
+<p>The modal user interface of the Jupyter Notebook has been optimized for efficient keyboard usage. This is made possible by having two different sets of keyboard shortcuts: one set that is active in edit mode and another in command mode.</p>
+<p>The most important keyboard shortcuts are <code class="docutils literal notranslate"><span class="pre">Enter</span></code>, which enters edit mode, and <code class="docutils literal notranslate"><span class="pre">Esc</span></code>, which enters command mode.</p>
+<p>In edit mode, most of the keyboard is dedicated to typing into the cell’s editor. Thus, in edit mode there are relatively few shortcuts. In command mode, the entire keyboard is available for shortcuts, so there are many more. The <code class="docutils literal notranslate"><span class="pre">Help</span></code>-&gt;``Keyboard Shortcuts`` dialog lists the available shortcuts.</p>
+<p>We recommend learning the command mode shortcuts in the following rough order:</p>
+<ol class="arabic simple">
+<li>Basic navigation: <code class="docutils literal notranslate"><span class="pre">enter</span></code>, <code class="docutils literal notranslate"><span class="pre">shift-enter</span></code>, <code class="docutils literal notranslate"><span class="pre">up/k</span></code>, <code class="docutils literal notranslate"><span class="pre">down/j</span></code></li>
+<li>Saving the notebook: <code class="docutils literal notranslate"><span class="pre">s</span></code></li>
+<li>Change Cell types: <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">1-6</span></code>, <code class="docutils literal notranslate"><span class="pre">t</span></code></li>
+<li>Cell creation: <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code></li>
+<li>Cell editing: <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code>, <code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code></li>
+<li>Kernel operations: <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code> (press twice)</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Running Code.html" class="btn btn-neutral float-right" title="Running Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="What is the Jupyter Notebook.html" class="btn btn-neutral" title="What is the Jupyter Notebook?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jupyter Team, https://jupyter.org.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'6.0.0.dev0',
+            LANGUAGE:'ko',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="../../None"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

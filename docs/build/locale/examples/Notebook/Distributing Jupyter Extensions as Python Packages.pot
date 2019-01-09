@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Jupyter Team, https://jupyter.org
+# This file is distributed under the same license as the Jupyter Notebook package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Jupyter Notebook 6.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-09 12:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:13
+msgid "Distributing Jupyter Extensions as Python Packages"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:21
+msgid "Overview"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:24
+msgid "How can the notebook be extended?"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:26
+msgid "The Jupyter Notebook client and server application are both deeply customizable. Their behavior can be extended by creating, respectively:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:28
+msgid "nbextension: a notebook extension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:30
+msgid "a single JS file, or directory of JavaScript, Cascading StyleSheets, etc. that contain at minimum a JavaScript module packaged as an `AMD modules <https://en.wikipedia.org/wiki/Asynchronous_module_definition>`__ that exports a function ``load_ipython_extension``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:32
+msgid "server extension: an importable Python module"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:34
+msgid "that implements ``load_jupyter_server_extension``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:36
+msgid "bundler extension: an importable Python module with generated File -> Download as / Deploy as menu item trigger"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:38
+msgid "that implements ``bundle``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:46
+msgid "Why create a Python package for Jupyter extensions?"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:48
+msgid "Since it is rare to have a server extension that does not have any frontend components (an nbextension), for convenience and consistency, all these client and server extensions with their assets can be packaged and versioned together as a Python package with a few simple commands, or as of Notebook 5.3, handled automatically by your package manager of choice. This makes installing the package of extensions easier and less error-prone for the user."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:56
+msgid "Installation of Jupyter Extensions"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:59
+msgid "Install a Python package containing Jupyter Extensions"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:61
+msgid "There are several ways that you may get a Python package containing Jupyter Extensions. Commonly, you will use a package manager for your system:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:79
+msgid "Automatic installation and Enabling"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:81
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:323
+msgid "New in Notebook 5.3"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:83
+msgid "The absolute simplest case requires no user interaction at all! Configured correctly, after installing with their package manager of choice, both server and frontend extensions can be enabled by default in the environment where they were installed, i.e. ``--sys-prefix``. See the ``setup.py`` in the example below."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:91
+msgid "Enable a Server Extension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:93
+msgid "The simplest case would be to enable a server extension which has no frontend components."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:95
+msgid "A ``pip`` user that wants their configuration stored in their home directory would type the following command:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:101
+msgid "Alternatively, a ``virtualenv`` or ``conda`` user can pass ``--sys-prefix`` which keeps their environment isolated and reproducible. For example:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:116
+msgid "Install the nbextension assets"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:123
+msgid "If a package also has an nbextension with frontend assets that must be available (but not neccessarily enabled by default), install these assets with the following command:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:135
+msgid "Enable nbextension assets"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:137
+msgid "If a package has assets that should be loaded every time a Jupyter app (e.g. lab, notebook, dashboard, terminal) is loaded in the browser, the following command can be used to enable the nbextension:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:149
+msgid "Did it work? Check by listing Jupyter Extensions."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:151
+msgid "After running one or more extension installation steps, you can list what is presently known about nbextensions, server extensions, or bundler extensions. The following commands will list which extensions are available, whether they are enabled, and other extension details:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:165
+msgid "Additional resources on creating and distributing packages"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:167
+msgid "Of course, in addition to the files listed, there are number of other files one needs to build a proper package. Here are some good resources: - `The Hitchhiker’s Guide to Packaging <https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/quickstart.html>`__ - `Repository Structure and Python <https://www.kennethreitz.org/essays/repository-structure-and-python>`__ by Kenneth Reitz"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:171
+msgid "How you distribute them, too, is important: - `Packaging and Distributing Projects <https://python-packaging-user-guide.readthedocs.io/tutorials/distributing-packages/>`__ - `conda: Building packages <https://conda.io/docs/building/build.html>`__"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:173
+msgid "Here are some tools to get you started: - `generator-nbextension <https://github.com/Anaconda-Platform/generator-nbextension>`__"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:181
+msgid "Example - Server extension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:189
+msgid "Creating a Python package with a server extension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:191
+msgid "Here is an example of a python module which contains a server extension directly on itself. It has this directory structure:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:206
+msgid "Defining the server extension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:208
+msgid "This example shows that the server extension and its ``load_jupyter_server_extension`` function are defined in the ``__init__.py`` file."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:211
+msgid "``my_module/__init__.py``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:230
+msgid "Install and enable the server extension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:232
+msgid "Which a user can install with:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:244
+msgid "Example - Server extension and nbextension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:252
+msgid "Creating a Python package with a server extension and nbextension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:254
+msgid "Here is another server extension, with a front-end module. It assumes this directory structure:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:271
+msgid "Defining the server extension and nbextension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:273
+msgid "This example again shows that the server extension and its ``load_jupyter_server_extension`` function are defined in the ``__init__.py`` file. This time, there is also a function ``_jupyter_nbextension_path`` for the nbextension."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:276
+msgid "``my_fancy_module/__init__.py``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:305
+msgid "Install and enable the server extension and nbextension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:307
+msgid "The user can install and enable the extensions with the following set of commands:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:321
+msgid "Automatically enabling a server extension and nbextension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:325
+msgid "Server extensions and nbextensions can be installed and enabled without any user intervention or post-install scripts beyond ``<package manager> install <extension package name>``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:332
+msgid "In addition to the ``my_fancy_module`` file tree, assume:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:349
+msgid "``jupyter-config/jupyter_notebook_config.d/my_fancy_module.json``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:367
+msgid "``jupyter-config/nbconfig/notebook.d/my_fancy_module.json``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:382
+msgid "Put all of them in place via:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:385
+msgid "``setup.py``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:418
+msgid "and last, but not least:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:421
+msgid "``MANIFEST.in``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:433
+msgid "As most package managers will only modify their environment, the eventual configuration will be as if the user had typed:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:441
+msgid "If a user manually ``disable``\\ s an extension, that configuration will override the bundled package configuration."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:449
+msgid "When automagical install fails"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:451
+msgid "Note this can still fail in certain situations with ``pip``, requiring manual use of ``install`` and ``enable`` commands."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:453
+msgid "Non-python-specific package managers (e.g. ``conda``, ``apt``) may choose not to implement the above behavior at the ``setup.py`` level, having more ways to put data files in various places at build time."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:461
+msgid "Example - Bundler extension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:469
+msgid "Creating a Python package with a bundlerextension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:471
+msgid "Here is a bundler extension that adds a *Download as -> Notebook Tarball (tar.gz)* option to the notebook *File* menu. It assumes this directory structure:"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:486
+msgid "Defining the bundler extension"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:488
+msgid "This example shows that the bundler extension and its ``bundle`` function are defined in the ``__init__.py`` file."
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:491
+msgid "``my_tarball_bundler/__init__.py``"
+msgstr ""
+
+#: ../../source/examples/Notebook/Distributing Jupyter Extensions as Python Packages.ipynb:549
+msgid "See `Extending the Notebook <../../extending/index.rst>`__ for more documentation about writing nbextensions, server extensions, and bundler extensions."
+msgstr ""
+

@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Jupyter Team, https://jupyter.org
+# This file is distributed under the same license as the Jupyter Notebook package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Jupyter Notebook 6.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-09 12:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/index.rst:3
+msgid "The Jupyter Notebook"
+msgstr ""
+
+#: ../../source/index.rst:5
+msgid "`Installation <https://jupyter.readthedocs.io/en/latest/install.html>`_"
+msgstr ""
+
+#: ../../source/index.rst:6
+msgid "`Starting the Notebook <https://jupyter.readthedocs.io/en/latest/running.html>`_"
+msgstr ""
+
+#: ../../source/index.rst:8
+msgid "User Documentation"
+msgstr ""
+
+#: ../../source/index.rst:19
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/index.rst:31
+msgid "Contributor Documentation"
+msgstr ""
+
