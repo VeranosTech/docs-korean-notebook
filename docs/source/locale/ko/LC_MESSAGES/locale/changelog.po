@@ -1,0 +1,2342 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Jupyter Team, https://jupyter.org
+# This file is distributed under the same license as the Jupyter Notebook
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Jupyter Notebook 6.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-09 12:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/changelog.rst:4
+msgid "Changelog"
+msgstr ""
+
+#: ../../source/changelog.rst:6
+msgid ""
+"A summary of changes in the Jupyter notebook. For more detailed "
+"information, see `GitHub <https://github.com/jupyter/notebook>`__."
+msgstr ""
+
+#: ../../source/changelog.rst:12
+msgid ""
+"Use ``pip install notebook --upgrade`` or ``conda upgrade notebook`` to "
+"upgrade to the latest release."
+msgstr ""
+
+#: ../../source/changelog.rst:17
+msgid ""
+"We strongly recommend that you upgrade pip to version 9+ of pip before "
+"upgrading ``notebook``."
+msgstr ""
+
+#: ../../source/changelog.rst:21
+msgid ""
+"Use ``pip install pip --upgrade`` to upgrade pip. Check pip version with "
+"``pip --version``."
+msgstr ""
+
+#: ../../source/changelog.rst:27
+msgid "5.7.4"
+msgstr ""
+
+#: ../../source/changelog.rst:29
+msgid ""
+"5.7.4 fixes a bug introduced in 5.7.3, in which the "
+"``list_running_servers()`` function attempts to parse HTML files as JSON,"
+" and consequently crashes (:ghpull:`4284`)."
+msgstr ""
+
+#: ../../source/changelog.rst:36
+msgid "5.7.3"
+msgstr ""
+
+#: ../../source/changelog.rst:38
+msgid "5.7.3 contains one security improvement and one security fix:"
+msgstr ""
+
+#: ../../source/changelog.rst:40
+msgid ""
+"Launch the browser with a local file which redirects to the server "
+"address including the authentication token (:ghpull:`4260`). This "
+"prevents another logged-in user from stealing the token from command line"
+" arguments and authenticating to the server. The single-use token "
+"previously used to mitigate this has been removed. Thanks to Dr. Owain "
+"Kenway for suggesting the local file approach."
+msgstr ""
+
+#: ../../source/changelog.rst:46
+msgid ""
+"Upgrade bootstrap to 3.4, fixing an XSS vulnerability, which has been "
+"assigned `CVE-2018-14041 "
+"<https://nvd.nist.gov/vuln/detail/CVE-2018-14041>`_ (:ghpull:`4271`)."
+msgstr ""
+
+#: ../../source/changelog.rst:53
+msgid "5.7.2"
+msgstr ""
+
+#: ../../source/changelog.rst:55
+msgid ""
+"5.7.2 contains a security fix preventing malicious directory names from "
+"being able to execute javascript. CVE request pending."
+msgstr ""
+
+#: ../../source/changelog.rst:61
+msgid "5.7.1"
+msgstr ""
+
+#: ../../source/changelog.rst:63
+msgid ""
+"5.7.1 contains a security fix preventing nbconvert endpoints from "
+"executing javascript with access to the server API. CVE request pending."
+msgstr ""
+
+#: ../../source/changelog.rst:68
+msgid "5.7.0"
+msgstr ""
+
+#: ../../source/changelog.rst:70 ../../source/changelog.rst:129
+#: ../../source/changelog.rst:176
+msgid "New features:"
+msgstr ""
+
+#: ../../source/changelog.rst:72
+msgid ""
+"Update to CodeMirror to 5.37, which includes f-string sytax for Python "
+"3.6 (:ghpull:`3816`)"
+msgstr ""
+
+#: ../../source/changelog.rst:73
+msgid "Update jquery-ui to 1.12 (:ghpull:`3836`)"
+msgstr ""
+
+#: ../../source/changelog.rst:74
+msgid ""
+"Check Host header to more securely protect localhost deployments from DNS"
+" rebinding. This is a pre-emptive measure, not fixing a known "
+"vulnerability (:ghpull:`3766`). Use ``.NotebookApp.allow_remote_access`` "
+"and ``.NotebookApp.local_hostnames`` to configure access."
+msgstr ""
+
+#: ../../source/changelog.rst:78
+msgid "Allow access-control-allow-headers to be overridden (:ghpull:`3886`)"
+msgstr ""
+
+#: ../../source/changelog.rst:79
+msgid "Allow configuring max_body_size and max_buffer_size (:ghpull:`3829`)"
+msgstr ""
+
+#: ../../source/changelog.rst:80
+msgid "Allow configuring get_secure_cookie keyword-args (:ghpull:`3778`)"
+msgstr ""
+
+#: ../../source/changelog.rst:81
+msgid "Respect nbconvert entrypoints as sources for exporters (:ghpull:`3879`)"
+msgstr ""
+
+#: ../../source/changelog.rst:82
+msgid ""
+"Include translation sources in source distributions (:ghpull:`3925`, "
+":ghpull:`3931`)"
+msgstr ""
+
+#: ../../source/changelog.rst:83
+msgid ""
+"Various improvements to documentation (:ghpull:`3799`, :ghpull:`3800`, "
+":ghpull:`3806`, :ghpull:`3883`, :ghpull:`3908`)"
+msgstr ""
+
+#: ../../source/changelog.rst:86 ../../source/changelog.rst:145
+#: ../../source/changelog.rst:194
+msgid "Fixing problems:"
+msgstr ""
+
+#: ../../source/changelog.rst:88
+msgid "Fix breadcrumb link when running with a base url (:ghpull:`3905`)"
+msgstr ""
+
+#: ../../source/changelog.rst:89
+msgid "Fix possible type error when closing activity stream (:ghpull:`3907`)"
+msgstr ""
+
+#: ../../source/changelog.rst:90
+msgid "Disable metadata editing for non-editable cells (:ghpull:`3744`)"
+msgstr ""
+
+#: ../../source/changelog.rst:91
+msgid "Fix some styling and alignment of prompts caused by regressions in 5.6.0."
+msgstr ""
+
+#: ../../source/changelog.rst:92
+msgid "Enter causing page reload in shortcuts editor (:ghpull:`3871`)"
+msgstr ""
+
+#: ../../source/changelog.rst:93
+msgid "Fix uploading to the same file twice (:ghpull:`3712`)"
+msgstr ""
+
+#: ../../source/changelog.rst:95
+#, python-format
+msgid ""
+"See the 5.7 milestone on GitHub for a complete list of `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A5.7>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:98 ../../source/changelog.rst:159
+#: ../../source/changelog.rst:260 ../../source/changelog.rst:334
+#: ../../source/changelog.rst:402 ../../source/changelog.rst:441
+msgid "Thanks to the following contributors:"
+msgstr ""
+
+#: ../../source/changelog.rst:100
+msgid "Aaron Hall"
+msgstr ""
+
+#: ../../source/changelog.rst:101
+msgid "Benjamin Ragan-Kelley"
+msgstr ""
+
+#: ../../source/changelog.rst:102
+msgid "Bill Major"
+msgstr ""
+
+#: ../../source/changelog.rst:103
+msgid "bxy007"
+msgstr ""
+
+#: ../../source/changelog.rst:104
+msgid "Dave Aitken"
+msgstr ""
+
+#: ../../source/changelog.rst:105
+msgid "Denis Ledoux"
+msgstr ""
+
+#: ../../source/changelog.rst:106
+msgid "Félix-Antoine Fortin"
+msgstr ""
+
+#: ../../source/changelog.rst:107
+msgid "Gabriel"
+msgstr ""
+
+#: ../../source/changelog.rst:108
+msgid "Grant Nestor"
+msgstr ""
+
+#: ../../source/changelog.rst:109
+msgid "Kevin Bates"
+msgstr ""
+
+#: ../../source/changelog.rst:110
+msgid "Kristian Gregorius Hustad"
+msgstr ""
+
+#: ../../source/changelog.rst:111
+msgid "M Pacer"
+msgstr ""
+
+#: ../../source/changelog.rst:112
+msgid "Madicken Munk"
+msgstr ""
+
+#: ../../source/changelog.rst:113
+msgid "Maitiu O Ciarain"
+msgstr ""
+
+#: ../../source/changelog.rst:114
+msgid "Matthias Bussonnier"
+msgstr ""
+
+#: ../../source/changelog.rst:115
+msgid "Michael Boyle"
+msgstr ""
+
+#: ../../source/changelog.rst:116
+msgid "Michael Chirico"
+msgstr ""
+
+#: ../../source/changelog.rst:117
+msgid "Mokkapati, Praneet(ES)"
+msgstr ""
+
+#: ../../source/changelog.rst:118
+msgid "Peter Parente"
+msgstr ""
+
+#: ../../source/changelog.rst:119
+msgid "Sally Wilsak"
+msgstr ""
+
+#: ../../source/changelog.rst:120
+msgid "Steven Silvester"
+msgstr ""
+
+#: ../../source/changelog.rst:121
+msgid "Thomas Kluyver"
+msgstr ""
+
+#: ../../source/changelog.rst:122
+msgid "Walter Martin"
+msgstr ""
+
+#: ../../source/changelog.rst:127
+msgid "5.6.0"
+msgstr ""
+
+#: ../../source/changelog.rst:131
+msgid ""
+"Execute cells by clicking icon in input prompt (:ghpull:`3535`, "
+":ghpull:`3687`)"
+msgstr ""
+
+#: ../../source/changelog.rst:132
+msgid "New \"Save as\" menu option (:ghpull:`3289`)"
+msgstr ""
+
+#: ../../source/changelog.rst:133
+msgid ""
+"When serving on a loopback interface, protect against DNS rebinding by "
+"checking the ``Host`` header from the browser (:ghpull:`3714`). This "
+"check can be disabled if necessary by setting "
+"``NotebookApp.allow_remote_access``. (Disabled by default while we work "
+"out some Mac issues in :ghissue:`3754`)."
+msgstr ""
+
+#: ../../source/changelog.rst:138
+msgid ""
+"Add kernel_info_timeout traitlet to enable restarting slow kernels "
+"(:ghpull:`3665`)"
+msgstr ""
+
+#: ../../source/changelog.rst:139
+msgid ""
+"Add ``custom_display_host`` config option to override displayed URL "
+"(:ghpull:`3668`)"
+msgstr ""
+
+#: ../../source/changelog.rst:140
+msgid "Add /metrics endpoint for Prometheus Metrics (:ghpull:`3490`)"
+msgstr ""
+
+#: ../../source/changelog.rst:141
+msgid "Update to MathJax 2.7.4 (:ghpull:`3751`)"
+msgstr ""
+
+#: ../../source/changelog.rst:142
+msgid "Update to jQuery 3.3 (:ghpull:`3655`)"
+msgstr ""
+
+#: ../../source/changelog.rst:143
+msgid "Update marked to 0.4 (:ghpull:`3686`)"
+msgstr ""
+
+#: ../../source/changelog.rst:147
+msgid "Don't duplicate token in displayed URL (:ghpull:`3656`)"
+msgstr ""
+
+#: ../../source/changelog.rst:148
+msgid "Clarify displayed URL when listening on all interfaces (:ghpull:`3703`)"
+msgstr ""
+
+#: ../../source/changelog.rst:149
+msgid "Don't trash non-empty directories on Windows (:ghpull:`3673`)"
+msgstr ""
+
+#: ../../source/changelog.rst:150
+msgid "Include LICENSE file in wheels (:ghpull:`3671`)"
+msgstr ""
+
+#: ../../source/changelog.rst:151
+msgid ""
+"Don't show \"0 active kernels\" when starting the notebook "
+"(:ghpull:`3696`)"
+msgstr ""
+
+#: ../../source/changelog.rst:153 ../../source/changelog.rst:245
+msgid "Testing:"
+msgstr ""
+
+#: ../../source/changelog.rst:155
+msgid "Add find replace test (:ghpull:`3630`)"
+msgstr ""
+
+#: ../../source/changelog.rst:156
+msgid "Selenium test for deleting all cells (:ghpull:`3601`)"
+msgstr ""
+
+#: ../../source/changelog.rst:157
+msgid "Make creating a new notebook more robust (:ghpull:`3726`)"
+msgstr ""
+
+#: ../../source/changelog.rst:161 ../../source/changelog.rst:262
+msgid "Arovit Narula (`arovit <https://github.com/arovit>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:162
+msgid "lucasoshiro (`lucasoshiro <https://github.com/lucasoshiro>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:163 ../../source/changelog.rst:284
+#: ../../source/changelog.rst:447
+msgid "M Pacer (`mpacer <https://github.com/mpacer>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:164 ../../source/changelog.rst:292
+#: ../../source/changelog.rst:340 ../../source/changelog.rst:425
+msgid "Thomas Kluyver (`takluyver <https://github.com/takluyver>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:165
+msgid "Todd (`toddrme2178 <https://github.com/toddrme2178>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:166 ../../source/changelog.rst:341
+msgid "Yuvi Panda (`yuvipanda <https://github.com/yuvipanda>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:168
+#, python-format
+msgid ""
+"See the 5.6 milestone on GitHub for a complete list of `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A5.6>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:174
+msgid "5.5.0"
+msgstr ""
+
+#: ../../source/changelog.rst:178
+msgid "The files list now shows file sizes (:ghpull:`3539`)"
+msgstr ""
+
+#: ../../source/changelog.rst:179
+msgid "Add a quit button in the dashboard (:ghpull:`3004`)"
+msgstr ""
+
+#: ../../source/changelog.rst:180
+msgid ""
+"Display hostname in the terminal when running remotely (:ghpull:`3356`, "
+":ghpull:`3593`)"
+msgstr ""
+
+#: ../../source/changelog.rst:181
+msgid "Add slides exportation/download to the menu (:ghpull:`3287`)"
+msgstr ""
+
+#: ../../source/changelog.rst:182
+msgid ""
+"Add any extra installed nbconvert exporters to the \"Download as\" menu "
+"(:ghpull:`3323`)"
+msgstr ""
+
+#: ../../source/changelog.rst:183
+msgid ""
+"Editor: warning when overwriting a file that is modified on disk "
+"(:ghpull:`2783`)"
+msgstr ""
+
+#: ../../source/changelog.rst:184
+msgid "Display a warning message if cookies are not enabled (:ghpull:`3511`)"
+msgstr ""
+
+#: ../../source/changelog.rst:185
+msgid "Basic ``__version__`` reporting for extensions (:ghpull:`3541`)"
+msgstr ""
+
+#: ../../source/changelog.rst:186
+msgid "Add ``NotebookApp.terminals_enabled`` config option (:ghpull:`3478`)"
+msgstr ""
+
+#: ../../source/changelog.rst:187
+msgid ""
+"Make buffer time between last modified on disk and last modified on last "
+"save configurable (:ghpull:`3273`)"
+msgstr ""
+
+#: ../../source/changelog.rst:188
+msgid "Allow binding custom shortcuts for 'close and halt' (:ghpull:`3314`)"
+msgstr ""
+
+#: ../../source/changelog.rst:189
+msgid "Add description for 'Trusted' notification (:ghpull:`3386`)"
+msgstr ""
+
+#: ../../source/changelog.rst:190
+msgid "Add ``settings['activity_sources']`` (:ghpull:`3401`)"
+msgstr ""
+
+#: ../../source/changelog.rst:191
+msgid "Add an ``output_updated.OutputArea`` event (:ghpull:`3560`)"
+msgstr ""
+
+#: ../../source/changelog.rst:196
+msgid "Fixes to improve web accessibility (:ghpull:`3507`)"
+msgstr ""
+
+#: ../../source/changelog.rst:198
+msgid "There is more to do on this! See :ghissue:`1801`."
+msgstr ""
+
+#: ../../source/changelog.rst:200
+msgid "Fixed color contrast issue in tree.less (:ghpull:`3336`)"
+msgstr ""
+
+#: ../../source/changelog.rst:201
+msgid "Allow cancelling upload of large files (:ghpull:`3373`)"
+msgstr ""
+
+#: ../../source/changelog.rst:202
+msgid "Don't clear login cookie on requests without cookie (:ghpull:`3380`)"
+msgstr ""
+
+#: ../../source/changelog.rst:203
+msgid ""
+"Don't trash files on different device to home dir on Linux "
+"(:ghpull:`3304`)"
+msgstr ""
+
+#: ../../source/changelog.rst:204
+msgid "Clear waiting asterisks when restarting kernel (:ghpull:`3494`)"
+msgstr ""
+
+#: ../../source/changelog.rst:205
+msgid "Fix output prompt when ``execution_count`` missing (:ghpull:`3236`)"
+msgstr ""
+
+#: ../../source/changelog.rst:206
+msgid ""
+"Make the 'changed on disk' dialog work when displayed twice "
+"(:ghpull:`3589`)"
+msgstr ""
+
+#: ../../source/changelog.rst:207
+msgid ""
+"Fix going back to root directory with history in notebook list "
+"(:ghpull:`3411`)"
+msgstr ""
+
+#: ../../source/changelog.rst:208
+msgid "Allow defining keyboard shortcuts for missing actions (:ghpull:`3561`)"
+msgstr ""
+
+#: ../../source/changelog.rst:209
+msgid ""
+"Prevent default on pageup/pagedown when completer is active "
+"(:ghpull:`3500`)"
+msgstr ""
+
+#: ../../source/changelog.rst:210
+msgid "Prevent default event handling on new terminal (:ghpull:`3497`)"
+msgstr ""
+
+#: ../../source/changelog.rst:211
+msgid ""
+"ConfigManager should not write out default values found in the .d "
+"directory (:ghpull:`3485`)"
+msgstr ""
+
+#: ../../source/changelog.rst:212
+msgid "Fix leak of iopub object in activity monitoring (:ghpull:`3424`)"
+msgstr ""
+
+#: ../../source/changelog.rst:213
+msgid "Javascript lint in notebooklist.js (:ghpull:`3409`)"
+msgstr ""
+
+#: ../../source/changelog.rst:214
+msgid "Some Javascript syntax fixes (:ghpull:`3294`)"
+msgstr ""
+
+#: ../../source/changelog.rst:215
+msgid "Convert native for loop to ``Array.forEach()`` (:ghpull:`3477`)"
+msgstr ""
+
+#: ../../source/changelog.rst:216
+msgid "Disable cache when downloading nbconvert output (:ghpull:`3484`)"
+msgstr ""
+
+#: ../../source/changelog.rst:217
+msgid "Add missing digestmod arg to HMAC (:ghpull:`3399`)"
+msgstr ""
+
+#: ../../source/changelog.rst:218
+msgid ""
+"Log OSErrors failing to create less-critical files during startup "
+"(:ghpull:`3384`)"
+msgstr ""
+
+#: ../../source/changelog.rst:219
+msgid "Use powershell on Windows (:ghpull:`3379`)"
+msgstr ""
+
+#: ../../source/changelog.rst:220
+msgid "API spec improvements, API handler improvements (:ghpull:`3368`)"
+msgstr ""
+
+#: ../../source/changelog.rst:221
+msgid ""
+"Set notebook to dirty state after change to kernel metadata "
+"(:ghpull:`3350`)"
+msgstr ""
+
+#: ../../source/changelog.rst:222
+msgid ""
+"Use CSP header to treat served files as belonging to a separate origin "
+"(:ghpull:`3341`)"
+msgstr ""
+
+#: ../../source/changelog.rst:223
+msgid "Don't install gettext into builtins (:ghpull:`3330`)"
+msgstr ""
+
+#: ../../source/changelog.rst:224
+msgid "Add missing ``import _`` (:ghpull:`3316`, :ghpull:`3326`)"
+msgstr ""
+
+#: ../../source/changelog.rst:225
+msgid "Write ``notebook.json`` file atomically (:ghpull:`3305`)"
+msgstr ""
+
+#: ../../source/changelog.rst:226
+msgid "Fix clicking with modifiers, page title updates (:ghpull:`3282`)"
+msgstr ""
+
+#: ../../source/changelog.rst:227
+msgid "Upgrade jQuery to version 2.2 (:ghpull:`3428`)"
+msgstr ""
+
+#: ../../source/changelog.rst:228
+msgid "Upgrade xterm.js to 3.1.0 (:ghpull:`3189`)"
+msgstr ""
+
+#: ../../source/changelog.rst:229
+msgid "Upgrade moment.js to 2.19.3 (:ghpull:`3562`)"
+msgstr ""
+
+#: ../../source/changelog.rst:230
+msgid "Upgrade CodeMirror to 5.35 (:ghpull:`3372`)"
+msgstr ""
+
+#: ../../source/changelog.rst:231
+msgid "\"Require\" pyzmq>=17 (:ghpull:`3586`)"
+msgstr ""
+
+#: ../../source/changelog.rst:233
+msgid "Documentation:"
+msgstr ""
+
+#: ../../source/changelog.rst:235
+msgid "Documentation updates and organisation (:ghpull:`3584`)"
+msgstr ""
+
+#: ../../source/changelog.rst:236
+msgid "Add section in docs about privacy (:ghpull:`3571`)"
+msgstr ""
+
+#: ../../source/changelog.rst:237
+msgid ""
+"Add explanation on how to change the type of a cell to Markdown "
+"(:ghpull:`3377`)"
+msgstr ""
+
+#: ../../source/changelog.rst:238
+msgid "Update docs with confd implementation details (:ghpull:`3520`)"
+msgstr ""
+
+#: ../../source/changelog.rst:239
+msgid ""
+"Add more information for where ``jupyter_notebook_config.py`` is located "
+"(:ghpull:`3346`)"
+msgstr ""
+
+#: ../../source/changelog.rst:240
+msgid ""
+"Document options to enable nbextensions in specific sections "
+"(:ghpull:`3525`)"
+msgstr ""
+
+#: ../../source/changelog.rst:241
+msgid ""
+"jQuery attribute selector value MUST be surrounded by quotes "
+"(:ghpull:`3527`)"
+msgstr ""
+
+#: ../../source/changelog.rst:242
+msgid "Do not execute special notebooks with nbsphinx (:ghpull:`3360`)"
+msgstr ""
+
+#: ../../source/changelog.rst:243
+msgid ""
+"Other minor fixes in :ghpull:`3288`, :ghpull:`3528`, :ghpull:`3293`, "
+":ghpull:`3367`"
+msgstr ""
+
+#: ../../source/changelog.rst:247
+msgid "Testing with Selenium & Sauce labs (:ghpull:`3321`)"
+msgstr ""
+
+#: ../../source/changelog.rst:248
+msgid "Selenium utils + markdown rendering tests (:ghpull:`3458`)"
+msgstr ""
+
+#: ../../source/changelog.rst:249
+msgid "Convert insert cell tests to Selenium (:ghpull:`3508`)"
+msgstr ""
+
+#: ../../source/changelog.rst:250
+msgid "Convert prompt numbers tests to Selenium (:ghpull:`3554`)"
+msgstr ""
+
+#: ../../source/changelog.rst:251
+msgid "Convert delete cells tests to Selenium (:ghpull:`3465`)"
+msgstr ""
+
+#: ../../source/changelog.rst:252
+msgid "Convert undelete cell tests to Selenium (:ghpull:`3475`)"
+msgstr ""
+
+#: ../../source/changelog.rst:253
+msgid "More selenium testing utilities (:ghpull:`3412`)"
+msgstr ""
+
+#: ../../source/changelog.rst:254
+msgid "Only check links when build is trigger by Travis Cron job (:ghpull:`3493`)"
+msgstr ""
+
+#: ../../source/changelog.rst:255
+msgid "Fix Appveyor build errors (:ghpull:`3430`)"
+msgstr ""
+
+#: ../../source/changelog.rst:256
+msgid ""
+"Undo patches in teardown before attempting to delete files "
+"(:ghpull:`3459`)"
+msgstr ""
+
+#: ../../source/changelog.rst:257
+msgid "Get tests running with tornado 5 (:ghpull:`3398`)"
+msgstr ""
+
+#: ../../source/changelog.rst:258
+msgid "Unpin ipykernel version on Travis (:ghpull:`3223`)"
+msgstr ""
+
+#: ../../source/changelog.rst:263
+msgid "Ashley Teoh (`ashleytqy <https://github.com/ashleytqy>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:264
+msgid "Nicholas Bollweg (`bollwyvl <https://github.com/bollwyvl>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:265
+msgid "Alex Rothberg (`cancan101 <https://github.com/cancan101>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:266
+msgid "Celina Kilcrease (`ckilcrease <https://github.com/ckilcrease>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:267
+msgid "dabuside (`dabuside <https://github.com/dabuside>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:268
+msgid "Damian Avila (`damianavila <https://github.com/damianavila>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:269
+msgid "Dana Lee (`danagilliann <https://github.com/danagilliann>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:270
+msgid "Dave Hirschfeld (`dhirschfeld <https://github.com/dhirschfeld>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:271
+msgid "Heng GAO (`ehengao <https://github.com/ehengao>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:272
+msgid "Leo Gallucci (`elgalu <https://github.com/elgalu>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:273
+msgid "Evan Van Dam (`evandam <https://github.com/evandam>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:274 ../../source/changelog.rst:410
+msgid "forbxy (`forbxy <https://github.com/forbxy>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:275 ../../source/changelog.rst:411
+#: ../../source/changelog.rst:444
+msgid "Grant Nestor (`gnestor <https://github.com/gnestor>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:276
+msgid "Ethan T. Hendrix (`hendrixet <https://github.com/hendrixet>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:277
+msgid "Miro Hrončok (`hroncok <https://github.com/hroncok>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:278
+msgid "Paul Ivanov (`ivanov <https://github.com/ivanov>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:279
+msgid "Darío Hereñú (`kant <https://github.com/kant>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:280 ../../source/changelog.rst:415
+msgid "Kevin Bates (`kevin-bates <https://github.com/kevin-bates>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:281 ../../source/changelog.rst:418
+msgid ""
+"Maarten Breddels (`maartenbreddels "
+"<https://github.com/maartenbreddels>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:282
+msgid "Michael Droettboom (`mdboom <https://github.com/mdboom>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:283 ../../source/changelog.rst:338
+#: ../../source/changelog.rst:422 ../../source/changelog.rst:446
+msgid "Min RK (`minrk <https://github.com/minrk>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:285
+msgid "Peter Parente (`parente <https://github.com/parente>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:286
+msgid "Paul Masson (`paulmasson <https://github.com/paulmasson>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:287
+msgid "Philipp Rudiger (`philippjfr <https://github.com/philippjfr>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:288
+msgid "Mac Knight (`Shels1909 <https://github.com/Shels1909>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:289
+msgid "Hisham Elsheshtawy (`Sheshtawy <https://github.com/Sheshtawy>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:290
+msgid "Simon Biggs (`SimonBiggs <https://github.com/SimonBiggs>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:291
+msgid "Sunil Hari (`sunilhari <https://github.com/sunilhari>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:293
+msgid "Tim Klever (`tklever <https://github.com/tklever>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:294
+msgid "Gabriel Ruiz (`unnamedplay-r <https://github.com/unnamedplay-r>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:295
+msgid "Vaibhav Sagar (`vaibhavsagar <https://github.com/vaibhavsagar>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:296
+msgid "William Hosford (`whosford <https://github.com/whosford>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:297
+msgid "Hong (`xuhdev <https://github.com/xuhdev>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:299
+#, python-format
+msgid ""
+"See the 5.5 milestone on GitHub for a complete list of `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A5.5>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:305
+msgid "5.4.1"
+msgstr ""
+
+#: ../../source/changelog.rst:307
+msgid ""
+"A security release to fix `CVE-2018-8768 <http://cve.mitre.org/cgi-"
+"bin/cvename.cgi?name=CVE-2018-8768>`_."
+msgstr ""
+
+#: ../../source/changelog.rst:310
+msgid ""
+"Thanks to `Alex <https://hackerone.com/pisarenko>`__ for identifying this"
+" bug, and Jonathan Kamens and Scott Sanderson at Quantopian for verifying"
+" it and bringing it to our attention."
+msgstr ""
+
+#: ../../source/changelog.rst:317
+msgid "5.4.0"
+msgstr ""
+
+#: ../../source/changelog.rst:319
+msgid ""
+"Fix creating files and folders after navigating directories in the "
+"dashboard (:ghpull:`3264`)."
+msgstr ""
+
+#: ../../source/changelog.rst:321
+msgid ""
+"Enable printing notebooks in colour, removing the CSS that made "
+"everything black and white (:ghpull:`3212`)."
+msgstr ""
+
+#: ../../source/changelog.rst:323
+msgid ""
+"Limit the completion options displayed in the notebook to 1000, to avoid "
+"performance issues with very long lists (:ghpull:`3195`)."
+msgstr ""
+
+#: ../../source/changelog.rst:325
+msgid "Accessibility improvements in ``tree.html`` (:ghpull:`3271`)."
+msgstr ""
+
+#: ../../source/changelog.rst:326
+msgid ""
+"Added alt-text to the kernel logo image in the notebook UI "
+"(:ghpull:`3228`)."
+msgstr ""
+
+#: ../../source/changelog.rst:327
+msgid ""
+"Added a test on Travis CI to flag if symlinks are accidentally introduced"
+" in the future. This should prevent the issue that necessitated "
+":ref:`release-5.3.1` (:ghpull:`3227`)."
+msgstr ""
+
+#: ../../source/changelog.rst:330
+msgid ""
+"Use lowercase letters for random IDs generated in our Javascript "
+"(:ghpull:`3264`)."
+msgstr ""
+
+#: ../../source/changelog.rst:332
+msgid "Removed duplicate code setting ``TextCell.notebook`` (:ghpull:`3256`)."
+msgstr ""
+
+#: ../../source/changelog.rst:336
+msgid "Alex Soderman (`asoderman <https://github.com/asoderman>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:337 ../../source/changelog.rst:406
+msgid "Matthias Bussonnier (`Carreau <https://github.com/Carreau>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:339
+msgid "Nitesh Sawant (`ns23 <https://github.com/ns23>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:343
+#, python-format
+msgid ""
+"See the 5.4 milestone on GitHub for a complete list of `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A5.4>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:349
+msgid "5.3.1"
+msgstr ""
+
+#: ../../source/changelog.rst:351
+msgid ""
+"Replaced a symlink in the repository with a copy, to fix issues "
+"installing on Windows (:ghpull:`3220`)."
+msgstr ""
+
+#: ../../source/changelog.rst:357
+msgid "5.3.0"
+msgstr ""
+
+#: ../../source/changelog.rst:359
+msgid ""
+"This release introduces a couple noteable improvements, such as terminal "
+"support for Windows and support for OS trash (files deleted from the "
+"notebook dashboard are moved to the OS trash vs. deleted permanently)."
+msgstr ""
+
+#: ../../source/changelog.rst:361
+msgid "Add support for terminals on windows (:ghpull:`3087`)."
+msgstr ""
+
+#: ../../source/changelog.rst:362
+msgid "Add a \"restart and run all\" button to the toolbar (:ghpull:`2965`)."
+msgstr ""
+
+#: ../../source/changelog.rst:363
+msgid "Send files to os trash mechanism on delete (:ghpull:`1968`)."
+msgstr ""
+
+#: ../../source/changelog.rst:364
+msgid "Allow programmatic copy to clipboard (:ghpull:`3088`)."
+msgstr ""
+
+#: ../../source/changelog.rst:365
+msgid ""
+"Use DOM History API for navigating between directories in the file "
+"browser (:ghpull:`3115`)."
+msgstr ""
+
+#: ../../source/changelog.rst:366
+msgid "Add translated files to folder(docs-translations) (:ghpull:`3065`)."
+msgstr ""
+
+#: ../../source/changelog.rst:367
+msgid "Allow non empty dirs to be deleted (:ghpull:`3108`)."
+msgstr ""
+
+#: ../../source/changelog.rst:368
+msgid "Set cookie on base_url (:ghpull:`2959`)."
+msgstr ""
+
+#: ../../source/changelog.rst:369
+msgid ""
+"Allow token-authenticated requests cross-origin by default "
+"(:ghpull:`2920`)."
+msgstr ""
+
+#: ../../source/changelog.rst:370
+msgid "Change cull_idle_timeout_minimum to 1 from 300 (:ghpull:`2910`)."
+msgstr ""
+
+#: ../../source/changelog.rst:371
+msgid ""
+"Config option to shut down server after n seconds with no kernels "
+"(:ghpull:`2963`)."
+msgstr ""
+
+#: ../../source/changelog.rst:372
+msgid "Display a \"close\" button on load notebook error (:ghpull:`3176`)."
+msgstr ""
+
+#: ../../source/changelog.rst:373
+msgid ""
+"Add action to command pallette to run CodeMirror's \"indentAuto\" on "
+"selection (:ghpull:`3175`)."
+msgstr ""
+
+#: ../../source/changelog.rst:374
+msgid "Add option to specify extra services (:ghpull:`3158`)."
+msgstr ""
+
+#: ../../source/changelog.rst:375
+msgid "Warn_bad_name should not use global name (:ghpull:`3160`)."
+msgstr ""
+
+#: ../../source/changelog.rst:376
+msgid "Avoid overflow of hidden form (:ghpull:`3148`)."
+msgstr ""
+
+#: ../../source/changelog.rst:377
+msgid "Fix shutdown trans loss (:ghpull:`3147`)."
+msgstr ""
+
+#: ../../source/changelog.rst:378
+msgid "Find available kernelspecs more efficiently (:ghpull:`3136`)."
+msgstr ""
+
+#: ../../source/changelog.rst:379
+msgid "Don\\'t try to translate missing help strings (:ghpull:`3122`)."
+msgstr ""
+
+#: ../../source/changelog.rst:380
+msgid ""
+"Frontend/extension-config: allow default json files in a .d directory "
+"(:ghpull:`3116`)."
+msgstr ""
+
+#: ../../source/changelog.rst:381
+msgid "Use `requirejs` vs. `require` (:ghpull:`3097`)."
+msgstr ""
+
+#: ../../source/changelog.rst:382
+msgid "Fixes some ui bugs in firefox #3044 (:ghpull:`3058`)."
+msgstr ""
+
+#: ../../source/changelog.rst:383
+msgid ""
+"Compare non-specific language code when choosing to use arabic numerals "
+"(:ghpull:`3055`)."
+msgstr ""
+
+#: ../../source/changelog.rst:384
+msgid "Fix save-script deprecation (:ghpull:`3053`)."
+msgstr ""
+
+#: ../../source/changelog.rst:385
+msgid "Include moment locales in package_data (:ghpull:`3051`)."
+msgstr ""
+
+#: ../../source/changelog.rst:386
+msgid "Fix moment locale loading in bidi support (:ghpull:`3048`)."
+msgstr ""
+
+#: ../../source/changelog.rst:387
+msgid "Tornado 5: periodiccallback loop arg will be removed (:ghpull:`3034`)."
+msgstr ""
+
+#: ../../source/changelog.rst:388
+msgid "Use `/files` prefix for pdf-like files (:ghpull:`3031`)."
+msgstr ""
+
+#: ../../source/changelog.rst:389
+msgid "Add folder for document translation (:ghpull:`3022`)."
+msgstr ""
+
+#: ../../source/changelog.rst:390
+msgid ""
+"When login-in via token, let a chance for user to set the password "
+"(:ghpull:`3008`)."
+msgstr ""
+
+#: ../../source/changelog.rst:391
+msgid ""
+"Switch to jupyter_core implementation of ensure_dir_exists "
+"(:ghpull:`3002`)."
+msgstr ""
+
+#: ../../source/changelog.rst:392
+msgid "Send http shutdown request on \\'stop\\' subcommand (:ghpull:`3000`)."
+msgstr ""
+
+#: ../../source/changelog.rst:393
+msgid "Work on loading ui translations  (:ghpull:`2969`)."
+msgstr ""
+
+#: ../../source/changelog.rst:394
+msgid "Fix ansi inverse (:ghpull:`2967`)."
+msgstr ""
+
+#: ../../source/changelog.rst:395
+msgid "Add send2trash to requirements for building docs (:ghpull:`2964`)."
+msgstr ""
+
+#: ../../source/changelog.rst:396
+msgid "I18n readme.md improvement (:ghpull:`2962`)."
+msgstr ""
+
+#: ../../source/changelog.rst:397
+msgid "Add \\'reason\\' field to json error responses (:ghpull:`2958`)."
+msgstr ""
+
+#: ../../source/changelog.rst:398
+msgid "Add some padding for stream outputs (:ghpull:`3194`)."
+msgstr ""
+
+#: ../../source/changelog.rst:399
+msgid "Always use setuptools in ``setup.py`` (:ghpull:`3206`)."
+msgstr ""
+
+#: ../../source/changelog.rst:400
+msgid ""
+"Fix clearing cookies on logout when ``base_url`` is configured "
+"(:ghpull:`3207`)."
+msgstr ""
+
+#: ../../source/changelog.rst:404
+msgid "bacboc (`bacboc <https://github.com/bacboc>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:405 ../../source/changelog.rst:443
+msgid "Steven Silvester (`blink1073 <https://github.com/blink1073>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:407
+msgid "ChungJooHo (`ChungJooHo <https://github.com/ChungJooHo>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:408
+msgid "edida (`edida <https://github.com/edida>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:409
+msgid "Francesco Franchina (``ferdas``)"
+msgstr ""
+
+#: ../../source/changelog.rst:412
+msgid "Josh Barnes (`jcb91 <https://github.com/jcb91>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:413
+msgid ""
+"JocelynDelalande (`JocelynDelalande "
+"<https://github.com/JocelynDelalande>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:414
+msgid "Karthik Balakrishnan (`karthikb351 <https://github.com/karthikb351>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:416
+msgid "Kirit Thadaka (`kirit93 <https://github.com/kirit93>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:417
+msgid "Lilian Besson (`Naereen <https://github.com/Naereen>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:419
+msgid "Madhu94 (`Madhu94 <https://github.com/Madhu94>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:420
+msgid "Matthias Geier (`mgeier <https://github.com/mgeier>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:421
+msgid "Michael Heilman (`mheilman <https://github.com/mheilman>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:423
+msgid "PHaeJin (`PHaeJin <https://github.com/PHaeJin>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:424
+msgid "Sukneet (`Sukneet <https://github.com/Sukneet>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:427
+#, python-format
+msgid ""
+"See the 5.3 milestone on GitHub for a complete list of `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A5.3>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:433
+msgid "5.2.1"
+msgstr ""
+
+#: ../../source/changelog.rst:435
+msgid ""
+"Fix invisible CodeMirror cursor at specific browser zoom levels "
+"(:ghpull:`2983`)."
+msgstr ""
+
+#: ../../source/changelog.rst:436
+msgid "Fix nbconvert handler causing broken export to PDF (:ghpull:`2981`)."
+msgstr ""
+
+#: ../../source/changelog.rst:437
+msgid ""
+"Fix the prompt_area argument of the output area constructor. "
+"(:ghpull:`2961`)."
+msgstr ""
+
+#: ../../source/changelog.rst:438
+msgid "Handle a compound extension in new_untitled (:ghpull:`2949`)."
+msgstr ""
+
+#: ../../source/changelog.rst:439
+msgid "Allow disabling offline message buffering (:ghpull:`2916`)."
+msgstr ""
+
+#: ../../source/changelog.rst:445
+msgid "Jason Grout (`jasongrout <https://github.com/jasongrout>`__)"
+msgstr ""
+
+#: ../../source/changelog.rst:449
+#, python-format
+msgid ""
+"See the 5.2.1 milestone on GitHub for a complete list of `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A5.2.1>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:455
+msgid "5.2.0"
+msgstr ""
+
+#: ../../source/changelog.rst:457
+msgid "Allow setting token via jupyter_token env (:ghpull:`2921`)."
+msgstr ""
+
+#: ../../source/changelog.rst:458
+msgid ""
+"Fix some errors caused by raising 403 in get_current_user "
+"(:ghpull:`2919`)."
+msgstr ""
+
+#: ../../source/changelog.rst:459
+msgid "Register contents_manager.files_handler_class directly (:ghpull:`2917`)."
+msgstr ""
+
+#: ../../source/changelog.rst:460
+msgid "Update viewable_extensions (:ghpull:`2913`)."
+msgstr ""
+
+#: ../../source/changelog.rst:461
+msgid ""
+"Show edit shortcuts modal after shortcuts modal is hidden "
+"(:ghpull:`2912`)."
+msgstr ""
+
+#: ../../source/changelog.rst:462
+msgid "Improve edit/view behavior (:ghpull:`2911`)."
+msgstr ""
+
+#: ../../source/changelog.rst:463
+msgid ""
+"The root directory of the notebook server should never be hidden "
+"(:ghpull:`2907`)."
+msgstr ""
+
+#: ../../source/changelog.rst:464
+msgid "Fix notebook require config to match tools/build-main (:ghpull:`2888`)."
+msgstr ""
+
+#: ../../source/changelog.rst:465
+msgid "Give page constructor default arguments (:ghpull:`2887`)."
+msgstr ""
+
+#: ../../source/changelog.rst:466
+msgid ""
+"Fix codemirror.less to match codemirror\\'s expected padding layout "
+"(:ghpull:`2880`)."
+msgstr ""
+
+#: ../../source/changelog.rst:467
+msgid "Add x-xsrftoken to access-control-allow-headers (:ghpull:`2876`)."
+msgstr ""
+
+#: ../../source/changelog.rst:468
+msgid "Buffer messages when websocket connection is interrupted (:ghpull:`2871`)."
+msgstr ""
+
+#: ../../source/changelog.rst:469
+msgid "Load locale dynamically only when not en-us (:ghpull:`2866`)."
+msgstr ""
+
+#: ../../source/changelog.rst:470
+msgid "Changed key strength to 2048 bits (:ghpull:`2861`)."
+msgstr ""
+
+#: ../../source/changelog.rst:471
+msgid "Resync jsversion with python version (:ghpull:`2860`)."
+msgstr ""
+
+#: ../../source/changelog.rst:472
+msgid "Allow copy operation on modified, read-only notebook (:ghpull:`2854`)."
+msgstr ""
+
+#: ../../source/changelog.rst:473
+msgid "Update error handling on apihandlers (:ghpull:`2853`)."
+msgstr ""
+
+#: ../../source/changelog.rst:474
+msgid "Test python 3.6 on travis, drop 3.3 (:ghpull:`2852`)."
+msgstr ""
+
+#: ../../source/changelog.rst:475
+msgid "Avoid base64-literals in image tests (:ghpull:`2851`)."
+msgstr ""
+
+#: ../../source/changelog.rst:476
+msgid "Upgrade xterm.js to 2.9.2 (:ghpull:`2849`)."
+msgstr ""
+
+#: ../../source/changelog.rst:477
+msgid ""
+"Changed all python variables named file to file_name to not override "
+"built_in file (:ghpull:`2830`)."
+msgstr ""
+
+#: ../../source/changelog.rst:478
+msgid "Add more doc tests (:ghpull:`2823`)."
+msgstr ""
+
+#: ../../source/changelog.rst:479
+msgid "Typos fix (:ghpull:`2815`)."
+msgstr ""
+
+#: ../../source/changelog.rst:480
+msgid "Rename and update license [ci skip] (:ghpull:`2810`)."
+msgstr ""
+
+#: ../../source/changelog.rst:481
+msgid "Travis builds doc  (:ghpull:`2808`)."
+msgstr ""
+
+#: ../../source/changelog.rst:482
+msgid "Pull request i18n  (:ghpull:`2804`)."
+msgstr ""
+
+#: ../../source/changelog.rst:483
+msgid ""
+"Factor out output_prompt_function, as is done with input prompt "
+"(:ghpull:`2774`)."
+msgstr ""
+
+#: ../../source/changelog.rst:484
+msgid "Use rfc5987 encoding for filenames (:ghpull:`2767`)."
+msgstr ""
+
+#: ../../source/changelog.rst:485
+msgid ""
+"Added path to the resources metadata, the same as in from_filename(...) "
+"in nbconvert.exporters.py (:ghpull:`2753`)."
+msgstr ""
+
+#: ../../source/changelog.rst:486
+msgid "Make \"extrakeys\" consistent for notebook and editor (:ghpull:`2745`)."
+msgstr ""
+
+#: ../../source/changelog.rst:487
+msgid "Bidi support (:ghpull:`2357`)."
+msgstr ""
+
+#: ../../source/changelog.rst:489
+msgid ""
+"Special thanks to `samarsultan <https://github.com/samarsultan>`__ and "
+"the Arabic Competence and Globalization Center Team at IBM Egypt for "
+"adding RTL (right-to-left) support to the notebook!"
+msgstr ""
+
+#: ../../source/changelog.rst:491
+#, python-format
+msgid ""
+"See the 5.2 milestone on GitHub for a complete list of `issues "
+"<https://github.com/jupyter/notebook/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A5.2>`__"
+" and `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A5.2>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:498
+msgid "5.1.0"
+msgstr ""
+
+#: ../../source/changelog.rst:500
+msgid "Preliminary i18n implementation (:ghpull:`2140`)."
+msgstr ""
+
+#: ../../source/changelog.rst:501
+msgid "Expose URL with auth token in notebook UI (:ghpull:`2666`)."
+msgstr ""
+
+#: ../../source/changelog.rst:502 ../../source/changelog.rst:505
+msgid "Fix search background style (:ghpull:`2387`)."
+msgstr ""
+
+#: ../../source/changelog.rst:503
+msgid ""
+"List running notebooks without requiring ``--allow-root`` "
+"(:ghpull:`2421`)."
+msgstr ""
+
+#: ../../source/changelog.rst:504
+msgid "Allow session of type other than notebook (:ghpull:`2559`)."
+msgstr ""
+
+#: ../../source/changelog.rst:506
+msgid ""
+"Fix some Markdown styling issues (:ghpull:`2571`), (:ghpull:`2691`) and "
+"(:ghpull:`2534`)."
+msgstr ""
+
+#: ../../source/changelog.rst:507
+msgid "Remove keymaps that conflict with non-English keyboards (:ghpull:`2535`)."
+msgstr ""
+
+#: ../../source/changelog.rst:508
+msgid "Add session-specific favicons (notebook, terminal, file) (:ghpull:`2452`)."
+msgstr ""
+
+#: ../../source/changelog.rst:509
+msgid "Add /api/shutdown handler (:ghpull:`2507`)."
+msgstr ""
+
+#: ../../source/changelog.rst:510
+msgid "Include metadata when copying a cell (:ghpull:`2349`)."
+msgstr ""
+
+#: ../../source/changelog.rst:511
+msgid "Stop notebook server from command line (:ghpull:`2388`)."
+msgstr ""
+
+#: ../../source/changelog.rst:512
+msgid ""
+"Improve \"View\" and \"Edit\" file handling in dashboard (:ghpull:`2449`)"
+" and (:ghpull:`2402`)."
+msgstr ""
+
+#: ../../source/changelog.rst:513
+msgid ""
+"Provide a promise to replace use of the ``app_initialized.NotebookApp`` "
+"event (:ghpull:`2710`)."
+msgstr ""
+
+#: ../../source/changelog.rst:514
+msgid "Fix disabled collapse/expand output button (:ghpull:`2681`)."
+msgstr ""
+
+#: ../../source/changelog.rst:515
+msgid ""
+"Cull idle kernels using ``--MappingKernelManager.cull_idle_timeout`` "
+"(:ghpull:`2215`)."
+msgstr ""
+
+#: ../../source/changelog.rst:516
+msgid "Allow read-only notebooks to be trusted (:ghpull:`2718`)."
+msgstr ""
+
+#: ../../source/changelog.rst:518
+#, python-format
+msgid ""
+"See the 5.1 milestone on GitHub for a complete list of `issues "
+"<https://github.com/jupyter/notebook/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A5.1>`__"
+" and `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A5.1>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:525
+msgid "5.0.0"
+msgstr ""
+
+#: ../../source/changelog.rst:527
+msgid ""
+"This is the first major release of the Jupyter Notebook since version 4.0"
+" was created by the \"Big Split\" of IPython and Jupyter."
+msgstr ""
+
+#: ../../source/changelog.rst:530
+msgid ""
+"We encourage users to start trying JupyterLab in preparation for a future"
+" transition."
+msgstr ""
+
+#: ../../source/changelog.rst:533
+msgid ""
+"We have merged more than 300 pull requests since 4.0. Some of the major "
+"user-facing changes are described here."
+msgstr ""
+
+#: ../../source/changelog.rst:537
+msgid "File sorting in the dashboard"
+msgstr ""
+
+#: ../../source/changelog.rst:539
+msgid ""
+"Files in the dashboard may now be sorted by last modified date or name "
+"(:ghpull:`943`):"
+msgstr ""
+
+#: ../../source/changelog.rst:545
+msgid "Cell tags"
+msgstr ""
+
+#: ../../source/changelog.rst:547
+msgid "There is a new cell toolbar for adding *cell tags* (:ghpull:`2048`):"
+msgstr ""
+
+#: ../../source/changelog.rst:552
+msgid ""
+"Cell tags are a lightweight way to customise the behaviour of tools "
+"working with notebooks; we're working on building support for them into "
+"tools like `nbconvert <https://nbconvert.readthedocs.io/en/latest/>`__ "
+"and `nbval <https://github.com/computationalmodelling/nbval>`__. To start"
+" using tags, select ``Tags`` in the ``View > Cell Toolbar`` menu in a "
+"notebook."
+msgstr ""
+
+#: ../../source/changelog.rst:558
+msgid ""
+"The UI for editing cell tags is basic for now; we hope to improve it in "
+"future releases."
+msgstr ""
+
+#: ../../source/changelog.rst:562
+msgid "Table style"
+msgstr ""
+
+#: ../../source/changelog.rst:564
+msgid ""
+"The default styling for tables in the notebook has been updated "
+"(:ghpull:`1776`)."
+msgstr ""
+
+#: ../../source/changelog.rst:566
+msgid "Before:"
+msgstr ""
+
+#: ../../source/changelog.rst:571
+msgid "After:"
+msgstr ""
+
+#: ../../source/changelog.rst:577
+msgid "Customise keyboard shortcuts"
+msgstr ""
+
+#: ../../source/changelog.rst:579
+msgid ""
+"You can now edit keyboard shortcuts for *Command Mode* within the UI "
+"(:ghpull:`1347`):"
+msgstr ""
+
+#: ../../source/changelog.rst:585
+msgid ""
+"See the ``Help > Edit Keyboard Shortcuts`` menu item and follow the "
+"instructions."
+msgstr ""
+
+#: ../../source/changelog.rst:588
+msgid "Other additions"
+msgstr ""
+
+#: ../../source/changelog.rst:590
+msgid ""
+"You can copy and paste cells between notebooks, using :kbd:`Ctrl-C` and "
+":kbd:`Ctrl-V` (:kbd:`Cmd-C` and :kbd:`Cmd-V` on Mac)."
+msgstr ""
+
+#: ../../source/changelog.rst:593
+msgid ""
+"It's easier to configure a password for the notebook with the new "
+"``jupyter notebook password`` command (:ghpull:`2007`)."
+msgstr ""
+
+#: ../../source/changelog.rst:596
+msgid ""
+"The file list can now be ordered by *last modified* or by *name* "
+"(:ghpull:`943`)."
+msgstr ""
+
+#: ../../source/changelog.rst:599
+msgid ""
+"Markdown cells now support attachments. Simply drag and drop an image "
+"from your desktop to a markdown cell to add it. Unlike relative links "
+"that you enter manually, attachments are embedded in the notebook itself."
+" An unreferenced attachment will be automatically scrubbed from the "
+"notebook on save (:ghpull:`621`)."
+msgstr ""
+
+#: ../../source/changelog.rst:605
+msgid ""
+"Undoing cell deletion now supports undeleting multiple cells. Cells may "
+"not be in the same order as before their deletion, depending on the "
+"actions you did on the meantime, but this should should help reduce the "
+"impact of accidentally deleting code."
+msgstr ""
+
+#: ../../source/changelog.rst:610
+msgid "The file browser now has *Edit* and *View* buttons."
+msgstr ""
+
+#: ../../source/changelog.rst:612
+msgid ""
+"The file browser now supports moving multiple files at once "
+"(:ghpull:`1088`)."
+msgstr ""
+
+#: ../../source/changelog.rst:615
+msgid ""
+"The Notebook will refuse to run as root unless the ``--allow-root`` flag "
+"is given (:ghpull:`1115`)."
+msgstr ""
+
+#: ../../source/changelog.rst:618
+msgid "Keyboard shortcuts are now declarative (:ghpull:`1234`)."
+msgstr ""
+
+#: ../../source/changelog.rst:620
+msgid "Toggling line numbers can now affect all cells (:ghpull:`1312`)."
+msgstr ""
+
+#: ../../source/changelog.rst:622
+msgid "Add more visible *Trusted* and *Untrusted* notifications (:ghpull:`1658`)."
+msgstr ""
+
+#: ../../source/changelog.rst:624
+msgid ""
+"The favicon (browser shortcut icon) now changes to indicate when the "
+"kernel is busy (:ghpull:`1837`)."
+msgstr ""
+
+#: ../../source/changelog.rst:627
+msgid ""
+"Header and toolbar visibility is now persisted in nbconfig and across "
+"sessions (:ghpull:`1769`)."
+msgstr ""
+
+#: ../../source/changelog.rst:630
+msgid ""
+"Load server extensions with ConfigManager so that merge happens "
+"recursively, unlike normal config values, to make it load more "
+"consistently with frontend extensions(:ghpull:`2108`)."
+msgstr ""
+
+#: ../../source/changelog.rst:634
+msgid ""
+"The notebook server now supports the `bundler API <https://jupyter-"
+"notebook.readthedocs.io/en/latest/extending/bundler_extensions.html>`__ "
+"from the `jupyter_cms incubator project <https://github.com/jupyter-"
+"incubator/contentmanagement>`__ (:ghpull:`1579`)."
+msgstr ""
+
+#: ../../source/changelog.rst:639
+msgid ""
+"The notebook server now provides information about kernel activity in its"
+" kernel resource API (:ghpull:`1827`)."
+msgstr ""
+
+#: ../../source/changelog.rst:642
+msgid ""
+"Remember that upgrading ``notebook`` only affects the user interface. "
+"Upgrading kernels and libraries may also provide new features, better "
+"stability and integration with the notebook interface."
+msgstr ""
+
+#: ../../source/changelog.rst:649
+msgid "4.4.0"
+msgstr ""
+
+#: ../../source/changelog.rst:651
+msgid ""
+"Allow override of output callbacks to redirect output messages. This is "
+"used to implement the ipywidgets Output widget, for example."
+msgstr ""
+
+#: ../../source/changelog.rst:652
+msgid ""
+"Fix an async bug in message handling by allowing comm message handlers to"
+" return a promise which halts message processing until the promise "
+"resolves."
+msgstr ""
+
+#: ../../source/changelog.rst:654
+#, python-format
+msgid ""
+"See the 4.4 milestone on GitHub for a complete list of `issues "
+"<https://github.com/jupyter/notebook/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A4.4>`__"
+" and `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A4.4>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:661
+msgid "4.3.2"
+msgstr ""
+
+#: ../../source/changelog.rst:663
+msgid ""
+"4.3.2 is a patch release with a bug fix for CodeMirror and improved "
+"handling of the \"editable\" cell metadata field."
+msgstr ""
+
+#: ../../source/changelog.rst:665
+msgid ""
+"Monkey-patch for CodeMirror that resolves `#2037 "
+"<https://github.com/jupyter/notebook/issues/2037>`__ without breaking "
+"`#1967 <https://github.com/jupyter/notebook/issues/1967>`__"
+msgstr ""
+
+#: ../../source/changelog.rst:666
+msgid ""
+"Read-only (``\"editable\": false``) cells can be executed but cannot be "
+"split, merged, or deleted"
+msgstr ""
+
+#: ../../source/changelog.rst:668
+#, python-format
+msgid ""
+"See the 4.3.2 milestone on GitHub for a complete list of `issues "
+"<https://github.com/jupyter/notebook/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A4.3.2>`__"
+" and `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A4.3.2>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:675
+msgid "4.3.1"
+msgstr ""
+
+#: ../../source/changelog.rst:677
+msgid ""
+"4.3.1 is a patch release with a security patch, a couple bug fixes, and "
+"improvements to the newly-released token authentication."
+msgstr ""
+
+#: ../../source/changelog.rst:679
+msgid "**Security fix**:"
+msgstr ""
+
+#: ../../source/changelog.rst:681
+msgid ""
+"CVE-2016-9971. Fix CSRF vulnerability, where malicious forms could create"
+" untitled files and start kernels (no remote execution or modification of"
+" existing files) for users of certain browsers (Firefox, Internet "
+"Explorer / Edge). All previous notebook releases are affected."
+msgstr ""
+
+#: ../../source/changelog.rst:687 ../../source/changelog.rst:727
+#: ../../source/changelog.rst:854
+msgid "Bug fixes:"
+msgstr ""
+
+#: ../../source/changelog.rst:689
+msgid "Fix carriage return handling"
+msgstr ""
+
+#: ../../source/changelog.rst:690
+msgid "Make the font size more robust against fickle browsers"
+msgstr ""
+
+#: ../../source/changelog.rst:691
+msgid "Ignore resize events that bubbled up and didn't come from window"
+msgstr ""
+
+#: ../../source/changelog.rst:692
+msgid "Add Authorization to allowed CORS headers"
+msgstr ""
+
+#: ../../source/changelog.rst:693
+msgid "Downgrade CodeMirror to 5.16 while we figure out issues in Safari"
+msgstr ""
+
+#: ../../source/changelog.rst:695 ../../source/changelog.rst:744
+#: ../../source/changelog.rst:890
+msgid "Other improvements:"
+msgstr ""
+
+#: ../../source/changelog.rst:697
+msgid "Better docs for token-based authentication"
+msgstr ""
+
+#: ../../source/changelog.rst:698
+msgid "Further highlight token info in log output when autogenerated"
+msgstr ""
+
+#: ../../source/changelog.rst:700
+#, python-format
+msgid ""
+"See the 4.3.1 milestone on GitHub for a complete list of `issues "
+"<https://github.com/jupyter/notebook/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A4.3.1>`__"
+" and `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A4.3.1>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:707
+msgid "4.3.0"
+msgstr ""
+
+#: ../../source/changelog.rst:709
+msgid ""
+"4.3 is a minor release with many bug fixes and improvements. The biggest "
+"user-facing change is the addition of token authentication, which is "
+"enabled by default. A token is generated and used when your browser is "
+"opened automatically, so you shouldn't have to enter anything in the "
+"default circumstances. If you see a login page (e.g. by switching "
+"browsers, or launching on a new port with ``--no-browser``), you get a "
+"login URL with the token from the command ``jupyter notebook list``, "
+"which you can paste into your browser."
+msgstr ""
+
+#: ../../source/changelog.rst:720 ../../source/changelog.rst:774
+#: ../../source/changelog.rst:792
+msgid "Highlights:"
+msgstr ""
+
+#: ../../source/changelog.rst:722
+msgid ""
+"API for creating mime-type based renderer extensions using "
+":code:`OutputArea.register_mime_type` and "
+":code:`Notebook.render_cell_output` methods. See `mimerender-cookiecutter"
+" <https://github.com/jupyterlab/mimerender-cookiecutter>`__ for reference"
+" implementations and cookiecutter."
+msgstr ""
+
+#: ../../source/changelog.rst:723
+msgid ""
+"Enable token authentication by default. See :ref:`server_security` for "
+"more details."
+msgstr ""
+
+#: ../../source/changelog.rst:724
+msgid "Update security docs to reflect new signature system"
+msgstr ""
+
+#: ../../source/changelog.rst:725
+msgid "Switched from term.js to xterm.js"
+msgstr ""
+
+#: ../../source/changelog.rst:729
+msgid "Ensure variable is set if exc_info is falsey"
+msgstr ""
+
+#: ../../source/changelog.rst:730
+msgid "Catch and log handler exceptions in :code:`events.trigger`"
+msgstr ""
+
+#: ../../source/changelog.rst:731
+msgid "Add debug log for static file paths"
+msgstr ""
+
+#: ../../source/changelog.rst:732
+msgid "Don't check origin on token-authenticated requests"
+msgstr ""
+
+#: ../../source/changelog.rst:733
+msgid "Remove leftover print statement"
+msgstr ""
+
+#: ../../source/changelog.rst:734
+msgid "Fix highlighting of Python code blocks"
+msgstr ""
+
+#: ../../source/changelog.rst:735
+msgid ":code:`json_errors` should be outermost decorator on API handlers"
+msgstr ""
+
+#: ../../source/changelog.rst:736
+msgid "Fix remove old nbserver info files"
+msgstr ""
+
+#: ../../source/changelog.rst:737
+msgid "Fix notebook mime type on download links"
+msgstr ""
+
+#: ../../source/changelog.rst:738
+msgid "Fix carriage symbol bahvior"
+msgstr ""
+
+#: ../../source/changelog.rst:739
+msgid "Fix terminal styles"
+msgstr ""
+
+#: ../../source/changelog.rst:740
+msgid "Update dead links in docs"
+msgstr ""
+
+#: ../../source/changelog.rst:741
+msgid "If kernel is broken, start a new session"
+msgstr ""
+
+#: ../../source/changelog.rst:742 ../../source/changelog.rst:760
+msgid "Include cross-origin check when allowing login URL redirects"
+msgstr ""
+
+#: ../../source/changelog.rst:746
+msgid "Allow JSON output data with mime type ``application/*+json``"
+msgstr ""
+
+#: ../../source/changelog.rst:747
+msgid "Allow kernelspecs to have spaces in them for backward compat"
+msgstr ""
+
+#: ../../source/changelog.rst:748
+msgid "Allow websocket connections from scripts"
+msgstr ""
+
+#: ../../source/changelog.rst:749
+msgid "Allow :code:`None` for post_save_hook"
+msgstr ""
+
+#: ../../source/changelog.rst:750
+msgid "Upgrade CodeMirror to 5.21"
+msgstr ""
+
+#: ../../source/changelog.rst:751
+msgid "Upgrade xterm to 2.1.0"
+msgstr ""
+
+#: ../../source/changelog.rst:752
+msgid "Docs for using comms"
+msgstr ""
+
+#: ../../source/changelog.rst:753
+msgid "Set :code:`dirty` flag when output arrives"
+msgstr ""
+
+#: ../../source/changelog.rst:754
+msgid "Set :code:`ws-url` data attribute when accessing a notebook terminal"
+msgstr ""
+
+#: ../../source/changelog.rst:755
+msgid "Add base aliases for nbextensions"
+msgstr ""
+
+#: ../../source/changelog.rst:756
+msgid "Include :code:`@` operator in CodeMirror IPython mode"
+msgstr ""
+
+#: ../../source/changelog.rst:757
+msgid "Extend mathjax_url docstring"
+msgstr ""
+
+#: ../../source/changelog.rst:758
+msgid "Load nbextension in predictable order"
+msgstr ""
+
+#: ../../source/changelog.rst:759
+msgid "Improve the error messages for nbextensions"
+msgstr ""
+
+#: ../../source/changelog.rst:762
+#, python-format
+msgid ""
+"See the 4.3 milestone on GitHub for a complete list of `issues "
+"<https://github.com/jupyter/notebook/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A4.3%20>`__"
+" and `pull requests "
+"<https://github.com/jupyter/notebook/pulls?utf8=%E2%9C%93&q=is%3Apr%20milestone%3A4.3%20>`__"
+" involved in this release."
+msgstr ""
+
+#: ../../source/changelog.rst:770
+msgid "4.2.3"
+msgstr ""
+
+#: ../../source/changelog.rst:772
+msgid "4.2.3 is a small bugfix release on 4.2."
+msgstr ""
+
+#: ../../source/changelog.rst:776
+msgid ""
+"Fix regression in 4.2.2 that delayed loading custom.js until after "
+"``notebook_loaded`` and ``app_initialized`` events have fired."
+msgstr ""
+
+#: ../../source/changelog.rst:778
+msgid "Fix some outdated docs and links."
+msgstr ""
+
+#: ../../source/changelog.rst:782
+msgid ""
+"4.2.3 `on GitHub "
+"<https://github.com/jupyter/notebook/milestones/4.2.3>`__."
+msgstr ""
+
+#: ../../source/changelog.rst:787
+msgid "4.2.2"
+msgstr ""
+
+#: ../../source/changelog.rst:789
+msgid ""
+"4.2.2 is a small bugfix release on 4.2, with an important security fix. "
+"All users are strongly encouraged to upgrade to 4.2.2."
+msgstr ""
+
+#: ../../source/changelog.rst:794
+msgid ""
+"**Security fix**: CVE-2016-6524, where untrusted latex output could be "
+"added to the page in a way that could execute javascript."
+msgstr ""
+
+#: ../../source/changelog.rst:796
+msgid "Fix missing POST in OPTIONS responses."
+msgstr ""
+
+#: ../../source/changelog.rst:797
+msgid "Fix for downloading non-ascii filenames."
+msgstr ""
+
+#: ../../source/changelog.rst:798
+msgid ""
+"Avoid clobbering ssl_options, so that users can specify more detailed SSL"
+" configuration."
+msgstr ""
+
+#: ../../source/changelog.rst:800
+msgid "Fix inverted load order in nbconfig, so user config has highest priority."
+msgstr ""
+
+#: ../../source/changelog.rst:801
+msgid "Improved error messages here and there."
+msgstr ""
+
+#: ../../source/changelog.rst:805
+msgid ""
+"4.2.2 `on GitHub "
+"<https://github.com/jupyter/notebook/milestones/4.2.2>`__."
+msgstr ""
+
+#: ../../source/changelog.rst:810
+msgid "4.2.1"
+msgstr ""
+
+#: ../../source/changelog.rst:812
+msgid "4.2.1 is a small bugfix release on 4.2. Highlights:"
+msgstr ""
+
+#: ../../source/changelog.rst:814
+msgid "Compatibility fixes for some versions of ipywidgets"
+msgstr ""
+
+#: ../../source/changelog.rst:815
+msgid "Fix for ignored CSS on Windows"
+msgstr ""
+
+#: ../../source/changelog.rst:816
+msgid "Fix specifying destination when installing nbextensions"
+msgstr ""
+
+#: ../../source/changelog.rst:820
+msgid ""
+"4.2.1 `on GitHub "
+"<https://github.com/jupyter/notebook/milestones/4.2.1>`__."
+msgstr ""
+
+#: ../../source/changelog.rst:825
+msgid "4.2.0"
+msgstr ""
+
+#: ../../source/changelog.rst:827
+msgid ""
+"Release 4.2 adds a new API for enabling and installing extensions. "
+"Extensions can now be enabled at the system-level, rather than just per-"
+"user. An API is defined for installing directly from a Python package, as"
+" well."
+msgstr ""
+
+#: ../../source/changelog.rst:833
+msgid ""
+":doc:`./examples/Notebook/Distributing Jupyter Extensions as Python "
+"Packages`"
+msgstr ""
+
+#: ../../source/changelog.rst:836
+msgid "Highlighted changes:"
+msgstr ""
+
+#: ../../source/changelog.rst:838
+msgid "Upgrade MathJax to 2.6 to fix vertical-bar appearing on some equations."
+msgstr ""
+
+#: ../../source/changelog.rst:839
+msgid "Restore ability for notebook directory to be root (4.1 regression)"
+msgstr ""
+
+#: ../../source/changelog.rst:840
+msgid ""
+"Large outputs are now throttled, reducing the ability of output floods to"
+" kill the browser."
+msgstr ""
+
+#: ../../source/changelog.rst:842
+msgid ""
+"Fix the notebook ignoring cell executions while a kernel is starting by "
+"queueing the messages."
+msgstr ""
+
+#: ../../source/changelog.rst:844
+msgid "Fix handling of url prefixes (e.g. JupyterHub) in terminal and edit pages."
+msgstr ""
+
+#: ../../source/changelog.rst:845
+msgid "Support nested SVGs in output."
+msgstr ""
+
+#: ../../source/changelog.rst:847
+msgid "And various other fixes and improvements."
+msgstr ""
+
+#: ../../source/changelog.rst:852
+msgid "4.1.0"
+msgstr ""
+
+#: ../../source/changelog.rst:856
+msgid "Properly reap zombie subprocesses"
+msgstr ""
+
+#: ../../source/changelog.rst:857
+msgid "Fix cross-origin problems"
+msgstr ""
+
+#: ../../source/changelog.rst:858
+msgid "Fix double-escaping of the base URL prefix"
+msgstr ""
+
+#: ../../source/changelog.rst:859
+msgid "Handle invalid unicode filenames more gracefully"
+msgstr ""
+
+#: ../../source/changelog.rst:860
+msgid "Fix ANSI color-processing"
+msgstr ""
+
+#: ../../source/changelog.rst:861
+msgid "Send keepalive messages for web terminals"
+msgstr ""
+
+#: ../../source/changelog.rst:862
+msgid "Fix bugs in the notebook tour"
+msgstr ""
+
+#: ../../source/changelog.rst:864
+msgid "UI changes:"
+msgstr ""
+
+#: ../../source/changelog.rst:866
+msgid ""
+"Moved the cell toolbar selector into the *View* menu. Added a button that"
+" triggers a \"hint\" animation to the main toolbar so users can find the "
+"new location. (Click here to see a `screencast "
+"<https://cloud.githubusercontent.com/assets/335567/10711889/59665a5a-"
+"7a3e-11e5-970f-86b89592880c.gif>`__ )"
+msgstr ""
+
+#: ../../source/changelog.rst:872
+msgid ""
+"Added *Restart & Run All* to the *Kernel* menu. Users can also bind it to"
+" a keyboard shortcut on action ``restart-kernel-and-run-all-cells``."
+msgstr ""
+
+#: ../../source/changelog.rst:874
+msgid ""
+"Added multiple-cell selection. Users press ``Shift-Up/Down`` or "
+"``Shift-K/J`` to extend selection in command mode. Various actions such "
+"as cut/copy/paste, execute, and cell type conversions apply to all "
+"selected cells."
+msgstr ""
+
+#: ../../source/changelog.rst:880
+msgid ""
+"Added a command palette for executing Jupyter actions by name. Users "
+"press ``Cmd/Ctrl-Shift-P`` or click the new command palette icon on the "
+"toolbar."
+msgstr ""
+
+#: ../../source/changelog.rst:885
+msgid ""
+"Added a *Find and Replace* dialog to the *Edit* menu. Users can also "
+"press ``F`` in command mode to show the dialog."
+msgstr ""
+
+#: ../../source/changelog.rst:892
+msgid ""
+"Custom KernelManager methods can be Tornado coroutines, allowing async "
+"operations."
+msgstr ""
+
+#: ../../source/changelog.rst:894
+msgid ""
+"Make clearing output optional when rewriting input with "
+"``set_next_input(replace=True)``."
+msgstr ""
+
+#: ../../source/changelog.rst:896
+msgid ""
+"Added support for TLS client authentication via ``--NotebookApp.client-"
+"ca``."
+msgstr ""
+
+#: ../../source/changelog.rst:897
+msgid ""
+"Added tags to ``jupyter/notebook`` releases on DockerHub. ``latest`` "
+"continues to track the master branch."
+msgstr ""
+
+#: ../../source/changelog.rst:900
+#, python-format
+msgid ""
+"See the 4.1 milestone on GitHub for a complete list of `issues "
+"<https://github.com/jupyter/notebook/issues?page=3&q=milestone%3A4.1+is%3Aclosed+is%3Aissue&utf8=%E2%9C%93>`__"
+" and `pull requests "
+"<https://github.com/jupyter/notebook/pulls?q=milestone%3A4.1+is%3Aclosed+is%3Apr>`__"
+" handled."
+msgstr ""
+
+#: ../../source/changelog.rst:905
+msgid "4.0.x"
+msgstr ""
+
+#: ../../source/changelog.rst:908
+msgid "4.0.6"
+msgstr ""
+
+#: ../../source/changelog.rst:910
+msgid "fix installation of mathjax support files"
+msgstr ""
+
+#: ../../source/changelog.rst:911
+msgid "fix some double-escape regressions in 4.0.5"
+msgstr ""
+
+#: ../../source/changelog.rst:912
+msgid "fix a couple of cases where errors could prevent opening a notebook"
+msgstr ""
+
+#: ../../source/changelog.rst:915
+msgid "4.0.5"
+msgstr ""
+
+#: ../../source/changelog.rst:917
+msgid "Security fixes for maliciously crafted files."
+msgstr ""
+
+#: ../../source/changelog.rst:919
+msgid ""
+"`CVE-2015-6938 <http://www.openwall.com/lists/oss-"
+"security/2015/09/02/3>`__: malicious filenames"
+msgstr ""
+
+#: ../../source/changelog.rst:920
+msgid ""
+"`CVE-2015-7337 <http://www.openwall.com/lists/oss-"
+"security/2015/09/16/3>`__: malicious binary files in text editor."
+msgstr ""
+
+#: ../../source/changelog.rst:922
+msgid "Thanks to Jonathan Kamens at Quantopian and Juan Broullón for the reports."
+msgstr ""
+
+#: ../../source/changelog.rst:926
+msgid "4.0.4"
+msgstr ""
+
+#: ../../source/changelog.rst:928
+msgid "Fix inclusion of mathjax-safe extension"
+msgstr ""
+
+#: ../../source/changelog.rst:931
+msgid "4.0.2"
+msgstr ""
+
+#: ../../source/changelog.rst:933
+msgid "Fix launching the notebook on Windows"
+msgstr ""
+
+#: ../../source/changelog.rst:934
+msgid "Fix the path searched for frontend config"
+msgstr ""
+
+#: ../../source/changelog.rst:938
+msgid "4.0.0"
+msgstr ""
+
+#: ../../source/changelog.rst:940
+msgid "First release of the notebook as a standalone package."
+msgstr ""
+
